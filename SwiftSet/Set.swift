@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct Set<T: Hashable>{
+struct Set<T: Hashable> {
     
     var data: [T : T]
     
@@ -77,5 +77,11 @@ struct Set<T: Hashable>{
                 return nil
             }
         }
+    }
+}
+
+extension Set : SequenceType{
+    func generate() -> SetGenerator<T>{
+        return SetGenerator(set: self)
     }
 }

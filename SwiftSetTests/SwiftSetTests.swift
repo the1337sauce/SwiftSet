@@ -91,7 +91,7 @@ class SwiftSetTests: XCTestCase {
         XCTAssertTrue(developerSet.count == 1, "Duplicate objects were added")
     }
     
-    func testWeCanBuildASetWithAn   (){
+    func testWeCanBuildASetWithAnArray(){
         let developers = [nate, joe, bob]
         let localDeveloperSet = Set(developers)
         XCTAssertTrue(localDeveloperSet.count == 3, "Incorrect number of objects were added")
@@ -139,5 +139,39 @@ class SwiftSetTests: XCTestCase {
         developerSet.add(bob)
         let array = developerSet.all()
         XCTAssertTrue(array.count == 3, "Array has incorrect number of elements")
+    }
+    
+    func testWeCanIterateThroughTheSetViaForInLoop(){
+        var integerSet = Set<Int>()
+        integerSet.add(5)
+        integerSet.add(10)
+        integerSet.add(15)
+        var total = 0
+        for integer in integerSet{
+            println("Integer is \(integer)")
+            total += integer
+        }
+        XCTAssertTrue(total == 30, "Our addition via enumeration didnt work correctly")
+    }
+    
+    func testForInLoopReturnsElementsInTheRightOrder(){
+        var integerSet = Set<Int>()
+        integerSet.add(5)
+        integerSet.add(10)
+        integerSet.add(15)
+        var iterationElements = [Int]()
+        for integer in integerSet{
+            iterationElements.append(integer)
+        }
+        XCTAssertTrue(iterationElements[0] == 5, "Element didnt appear where expected")
+        XCTAssertTrue(iterationElements[1] == 10, "Element didnt appear where expected")
+        XCTAssertTrue(iterationElements[2] == 15, "Element didnt appear where expected")
+    }
+    
+    func testWeCanHandleIterationOverEmptySet(){
+        for developer in developerSet{
+            XCTAssertTrue(false, "We entered the for loop with no elements in the set")
+        }
+        XCTAssertTrue(true, "We never entered the for in loop and didnt blow up")
     }
 }
