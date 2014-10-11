@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct Set<T: Hashable> {
     
     var data: [T : T]
@@ -16,7 +15,6 @@ struct Set<T: Hashable> {
     var count: Int {
         return data.keys.array.count
     }
-    
     
     init(){
         data = [T : T]()
