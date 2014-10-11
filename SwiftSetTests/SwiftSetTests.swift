@@ -33,4 +33,43 @@ class SwiftSetTests: XCTestCase {
         }
     }
     
+    func testWeCanAddAnObject(){
+        
+    }
+    
+    func testWeCanRemoveAnObject(){
+        
+    }
+    
+    func testWeCanRemoveAllObjects(){
+        
+    }
+    
+    func testWeCanReturnProperObjectCount(){
+        
+    }
+    
+    func testWeCanCheckIfWeContainAnObject(){
+        
+    }
+    
+    func testWeCanGetAnObject(){
+        
+    }
+    
+    func testWeCanGetAnObjectViaSubscripts(){
+        
+    }
+    
+    func testWeCantAddTwoEqualObjects(){
+        
+    }
+    
+    func testWeCanAddTwoObjectsWithTheSameHash(){
+        
+    }
+    
+    
+    
+    
 }
