@@ -132,4 +132,12 @@ class SwiftSetTests: XCTestCase {
         }
         XCTAssertTrue(result == 165, "Reduce didn't function properly")
     }
+    
+    func testCanReturnAllElementsInAnArray(){
+        developerSet.add(nate)
+        developerSet.add(joe)
+        developerSet.add(bob)
+        let array = developerSet.all()
+        XCTAssertTrue(array.count == 3, "Array has incorrect number of elements")
+    }
 }

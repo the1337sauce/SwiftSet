@@ -49,6 +49,10 @@ struct Set<T: Hashable>{
         return data.keys.array.reduce(initial, combine)
     }
     
+    func all() -> [T]{
+        return data.keys.array
+    }
+    
     mutating func add(newElement: T){
         if(!contains(newElement)){
             data.updateValue(newElement, forKey: newElement)
@@ -72,9 +76,6 @@ struct Set<T: Hashable>{
             } else{
                 return nil
             }
-        }
-        set(newValue) {
-            add(element)
         }
     }
 }
