@@ -22,40 +22,59 @@ struct Set<T: Hashable>{
         data = [T : T]()
     }
     
-    func containsObject(object: T) -> Bool{
-        return data[object] != nil
-    }
-    
-    func member(object: T) -> T?{
-        return data[object]
-    }
-    
-    mutating func addObject(object: T){
-        if(!containsObject(object)){
-            data.updateValue(object, forKey: object)
+    init(_ array: [T]){
+        self.init()
+        for item in array{
+            data.updateValue(item, forKey:item)
         }
     }
     
-    mutating func removeObject(object: T){
-        if(containsObject(object)){
-            data.removeAtIndex(data.indexForKey(object)!)
+    func contains(element: T) -> Bool{
+        return data[element] != nil
+    }
+    
+    func member(element: T) -> T?{
+        return data[element]
+    }
+    
+    func filter(includeElement: (T) -> Bool) -> Set<T>{
+        return Set(data.keys.array.filter(includeElement))
+    }
+    
+    func map<U>(transform: (T) -> U) -> Set<U>{
+        return Set<U>(data.keys.array.map(transform))
+    }
+    
+    func reduce<U>(initial: U, combine: (U, T) -> U) -> U{
+        return data.keys.array.reduce(initial, combine)
+    }
+    
+    mutating func add(newElement: T){
+        if(!contains(newElement)){
+            data.updateValue(newElement, forKey: newElement)
         }
     }
     
-    mutating func removeAllObjects(){
+    mutating func remove(element: T){
+        if(contains(element)){
+            data.removeAtIndex(data.indexForKey(element)!)
+        }
+    }
+    
+    mutating func removeAll(){
         data.removeAll(keepCapacity: false)
     }
     
-    subscript(object: T) -> T? {
+    subscript(element: T) -> T? {
         get {
-            if let member = member(object)?{
+            if let member = member(element)?{
                 return member
             } else{
                 return nil
             }
         }
         set(newValue) {
-            addObject(object)
+            add(element)
         }
     }
 }
