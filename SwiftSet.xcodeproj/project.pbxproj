@@ -15,6 +15,8 @@
 		F990068E19E95ADB006246C0 /* SwiftSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990068D19E95ADB006246C0 /* SwiftSetTests.swift */; };
 		F990069819E95B03006246C0 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990069719E95B03006246C0 /* Set.swift */; };
 		F990069919E95B03006246C0 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990069719E95B03006246C0 /* Set.swift */; };
+		F990069B19E97446006246C0 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990069A19E97446006246C0 /* Developer.swift */; };
+		F990069C19E97446006246C0 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990069A19E97446006246C0 /* Developer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 		F990068C19E95ADB006246C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F990068D19E95ADB006246C0 /* SwiftSetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSetTests.swift; sourceTree = "<group>"; };
 		F990069719E95B03006246C0 /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		F990069A19E97446006246C0 /* Developer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +83,13 @@
 		F990067419E95ADB006246C0 /* SwiftSet */ = {
 			isa = PBXGroup;
 			children = (
+				F990069719E95B03006246C0 /* Set.swift */,
 				F990067719E95ADB006246C0 /* AppDelegate.swift */,
 				F990067919E95ADB006246C0 /* ViewController.swift */,
 				F990067B19E95ADB006246C0 /* Main.storyboard */,
 				F990067E19E95ADB006246C0 /* Images.xcassets */,
 				F990068019E95ADB006246C0 /* LaunchScreen.xib */,
 				F990067519E95ADB006246C0 /* Supporting Files */,
-				F990069719E95B03006246C0 /* Set.swift */,
 			);
 			path = SwiftSet;
 			sourceTree = "<group>";
@@ -104,6 +107,7 @@
 			children = (
 				F990068D19E95ADB006246C0 /* SwiftSetTests.swift */,
 				F990068B19E95ADB006246C0 /* Supporting Files */,
+				F990069A19E97446006246C0 /* Developer.swift */,
 			);
 			path = SwiftSetTests;
 			sourceTree = "<group>";
@@ -216,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F990069B19E97446006246C0 /* Developer.swift in Sources */,
 				F990067A19E95ADB006246C0 /* ViewController.swift in Sources */,
 				F990067819E95ADB006246C0 /* AppDelegate.swift in Sources */,
 				F990069819E95B03006246C0 /* Set.swift in Sources */,
@@ -226,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F990069C19E97446006246C0 /* Developer.swift in Sources */,
 				F990069919E95B03006246C0 /* Set.swift in Sources */,
 				F990068E19E95ADB006246C0 /* SwiftSetTests.swift in Sources */,
 			);
